@@ -1,6 +1,6 @@
 {
-  "name": "qr-code-generator",
-  "version": "0.2.0",
+  "name": "better-qr-code-generator",
+  "version": "0.1.0",
   "description": "A GitHub Action that generates a QR Code and returns base64 Data",
   "main": "lib/main.js",
   "scripts": {
@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hammadj/qr-code-generator.git"
+    "url": "git+https://github.com/fedeorlandau/qr-code-generator.git"
   },
   "keywords": [
     "actions",
     "node",
     "setup"
   ],
-  "author": "hammadj",
+  "author": "fedeorlandau",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.0",

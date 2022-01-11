@@ -7,12 +7,16 @@ async function run(): Promise<void> {
     const data = await QRCode.toDataURL(content)
     const text = await QRCode.toString(content)
 
-    core.setOutput('data', data)
-    core.setOutput('text', text)
+    core.setOutput('QR_DATA', data)
+    core.setOutput('QR_TEXT', text)
     // eslint-disable-next-line no-console
     console.log(text)
   } catch (error) {
-    core.setFailed(error.message)
+    if (error instanceof Error) {
+      core.setFailed(error.message)
+    } else {
+      core.setFailed('Internal error')
+    }
   }
 }
 
